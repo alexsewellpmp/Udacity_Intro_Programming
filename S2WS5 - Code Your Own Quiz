@@ -1,0 +1,55 @@
+# Alex Sewell Section 2 Work Session 5 Assignment - Build Your Own Quiz
+
+# PEP-0263 Compatible
+# !/usr/bin/env python
+# -*- coding: UTF-8 -*-
+# vim: set fileencoding=<encoding name> :
+
+# Key Functional Requirements - User defined difficulty levels (easy,medium,hard), 
+# on run difficulty prompt to user, level specific quiz, four or more fill in the blanks, 
+# user prompt to fill in blanks, answer validation, correct and incorrect response prompts,
+# executable through Python interpreter IDLE.
+
+# Reference point for space replacement with correct user answer.
+
+""" VARIABLES AND REFERENCE POINTS """
+
+quiz_level = ["easy","medium","hard"]
+answer_space = ["__1__", "__2__", "__3__", "__4__", "__5__"]
+
+easy_quiz = "Python is an interpretive __1__ language that’s great for beginners. The emphasis of __2__ is on code readability and efficiency. Python is considered an __3__ language because you can interact with it through a Python prompt.  Python also encapsulates code within objects like elements and functions which makes it an __4__ oriented scripting language."
+easy_answers = ["programming","Python", "interactive", "object", "language"]
+
+medium_quiz = "Python is an __1__ - Oriented Programming language and supports five standard data types; numbers, __2__, tuple, dictionary and list.  A key differences between lists and tuples are that lists are enclosed in __3__ and their elements and size can be changed, while tuples are enclosed in __4__ and cannot be updated."
+medium_answers = ["Object", "strings", "brackets", "parentheses"]
+
+hard_quiz = "Python is an interactive, interpretive and __1__ - oriented programming language that supports five standard data types; numbers, __2__, tuple, dictionary and list.  Python also has __3__ or reserved values that should not or cannot be used as a variable or identifier.  Blocks of code are denoted by line __4__ and the spaces found in indentation are considered a __5__."
+hard_answers = ["object", "strings", "built-in", "indentation", "variable"]
+
+
+""" FUNCTIONS """
+
+def start_game(level):
+	level = raw_input("Type your desired difficulty level: easy, medium, or hard: ")
+	if level != quiz_level[0:3]:
+		return raw_input ("You need to type: easy, medium, or hard: ")	
+	elif raw_input == quiz_level[0]:
+		return easy_quiz
+# 		answers = easy_answers
+# 	if quiz_level == "medium":
+# 		quiz = medium_quiz
+# 		answers = medium_answers
+# 	if quiz_level == "hard":
+# 		quiz = hard_quiz
+# 		answers = hard_answers
+# 	print quiz
+
+# def check_answer (user_response, answers):
+#         while answers_index < len(answers):
+#                 if user_response == answers[answers_index]:
+#                         return "Correct!"
+#                 return "Incorrect.  Please try your answer again."
+
+def execute_game(quiz_level)
+
+print execute_game()
