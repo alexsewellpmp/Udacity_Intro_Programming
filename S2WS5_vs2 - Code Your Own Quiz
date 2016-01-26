@@ -1,1 +1,75 @@
+# Alex Sewell Section 2 Work Session 5 Assignment - Build Your Own Quiz
+
+# PEP-0263 Compatible
+# !/usr/bin/env python
+# -*- coding: UTF-8 -*-
+# vim: set fileencoding=<encoding name> :
+
+# Key Functional Requirements - User defined difficulty levels (easy,medium,hard), 
+# on run difficulty prompt to user, level specific quiz, four or more fill in the blanks, 
+# user prompt to fill in blanks, answer validation, correct and incorrect response prompts,
+# executable through Python interpreter IDLE.
+
+# Reference point for space replacement with correct user answer.
+
+""" VARIABLES AND REFERENCE POINTS """
+
+quiz_level = ["easy","medium","hard"]
+
+easy_quiz = "Python is an interpretive _____1_____ language that is great for beginners. The emphasis of __2___ is on code readability and efficiency. Python is considered an _____3_____ language because you can interact with it through a Python prompt.  Python also encapsulates code within objects like elements and functions which makes it an ___4__ oriented scripting language."
+easy_space = ["_____1_____", "__2___", "_____3_____", "___4__"]
+easy_answers = ["programming","Python", "interactive", "object"]
+
+medium_quiz = "Python is an __1___ - Oriented Programming language and supports five standard data types; numbers, ___2___, tuple, dictionary and list.  A key differences between lists and tuples are that lists are enclosed in ____3___ and their elements and size can be changed, while tuples are enclosed in _____4_____ and cannot be updated."
+medium_space = ["__1___", "___2___", "____3___", "_____4_____"]
+medium_answers = ["Object", "strings", "brackets", "parentheses"]
+
+hard_quiz = "Python is an interactive, interpretive and __1___ - Oriented Programming language that supports five standard data types; numbers, ___2___, tuple, dictionary and list.  Python also has ____3___ or reserved values that should not or cannot be used as a variable or identifier.  Blocks of code are denoted by line _____4_____ and the spaces found in indentation are considered a ____5___."
+hard_space = ["__1___", "___2___", "____3___", "_____4_____", "____5___"]
+hard_answers = ["object", "strings", "built-in", "indentation", "variable"]
+
+
+""" FUNCTIONS """
+
+def select_level():
+	level = raw_input("What's your challenge level? (easy, medium, or hard): ")
+	while level not in quiz_level[0:]:
+		level = raw_input ("You need to type easy, medium, or hard.: ")	
+	if level == quiz_level[0]:
+		begin_quiz(easy_quiz, easy_space, easy_answers)
+	elif level == quiz_level[1]:
+		begin_quiz(medium_quiz, medium_space, medium_answers)
+	else:
+		begin_quiz(hard_quiz, hard_space, hard_answers)
+
+
+
+def begin_quiz(quiz, space, answers):
+	print quiz
+	num_space = len(space)
+	for quiz_num in range(0, num_space):
+		user_response = raw_input("What's your answer" + space[quiz_num] + "?: ")
+		while answer_incorrect(user_response, answers[quiz_num]):
+			user_response = raw_input("Fail - Try again" + space[quiz_num] + ": ")
+		quiz = quiz.replace(space[quiz_num], answers[quiz_num])
+		print quiz
+		if quiz_num == num_space - 1:
+			print "You did ok, you passed, but barely.... F+"
+
+
+
+def answer_incorrect(user_response, correct_answer):
+	user_response = user_response.lower()
+	correct_answer = correct_answer.lower()
+	return user_response != correct_answer
+
+
+
+def execute():
+	select_level()
+
+
+execute()
+
+
 
