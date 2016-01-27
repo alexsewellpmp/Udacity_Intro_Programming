@@ -1,0 +1,78 @@
+# Alex Sewell Section 2 Work Session 5 Assignment - Build Your Own Quiz
+
+# PEP-0263 Compatible
+# !/usr/bin/env python
+# -*- coding: UTF-8 -*-
+# vim: set fileencoding=<encoding name> :
+
+# Key Functional Requirements - User defined difficulty levels (easy,medium,hard), 
+# on run difficulty prompt to user, level specific quiz, four or more fill in the blanks, 
+# user prompt to fill in blanks, answer validation, correct and incorrect response prompts,
+# executable through Python interpreter IDLE.
+
+# Reference point for space replacement with correct user answer.
+
+""" VARIABLES AND REFERENCE POINTS """
+
+# To be called upon within the select_level function. 
+quiz_level = ["easy","medium","hard"]
+
+# \n is used to create spacing between, prompts, outputs and user_response.
+# The following six variables are assigned quiz level values called upon when the below functions execute.
+# The character count of _space are equal to the character count of _answers and fill in spaces of each _quiz. 
+easy_quiz = "\n Python is an interpretive _____1_____ language that is great for beginners. The emphasis of __2___ is on code readability and efficiency. Python is considered an _____3_____ language because you can interact with it through a Python prompt.  Python also encapsulates code within objects like elements and functions which makes it an ___4__ oriented scripting language."
+easy_space = ["_____1_____", "__2___", "_____3_____", "___4__"]
+easy_answers = ["programming","Python", "interactive", "object"]
+
+medium_quiz = "\n Python is an __1___ - Oriented Programming language and supports five standard data types; numbers, ___2___, tuple, dictionary and list.  A key differences between lists and tuples are that lists are enclosed in ____3___ and their elements and size can be changed, while tuples are enclosed in _____4_____ and cannot be updated."
+medium_space = ["__1___", "___2___", "____3___", "_____4_____"]
+medium_answers = ["Object", "strings", "brackets", "parentheses"]
+
+hard_quiz = "\n Python is an interactive, interpretive and __1___ - Oriented Programming language that supports five standard data types; numbers, ___2___, tuple, dictionary and list.  Python also has ____3___ or reserved values that should not or cannot be used as a variable or identifier.  Blocks of code are denoted by line _____4_____ and the spaces found in indentation are considered a ____5___."
+hard_space = ["__1___", "___2___", "____3___", "_____4_____", "____5___"]
+hard_answers = ["object", "strings", "built-in", "indentation", "variable"]
+ 
+
+""" FUNCTIONS """
+
+# First the function prompts the user to select_level. Then, based on user_response raw_input 
+# the function returns variable quiz values by calling on the def begin_quiz function below.
+def select_level():
+	level = raw_input("\n Type the level you prefer (easy, medium, or hard) and good luck! We are all counting on you: ")
+	while level not in quiz_level[0:]:
+		level = raw_input ("\n You need to type easy, medium, or hard : ")	
+	if level == quiz_level[0]:
+		begin_quiz(easy_quiz, easy_space, easy_answers)
+	elif level == quiz_level[1]:
+		begin_quiz(medium_quiz, medium_space, medium_answers)
+	else:
+		begin_quiz(hard_quiz, hard_space, hard_answers)
+
+
+# This function is triggered by the select_level function once user_response raw_input enters the
+# prefered quiz level.  Then, it prompts the user to submit an answer to fill in the blank.  
+# Then the function validates the user_response raw_input against x_space and x_answer values.
+# If correct function will replace the _space with _answer and print the string with the space populated.
+def begin_quiz(quiz, space, answers):
+	print quiz
+	num_space = len(space)
+	for quiz_num in range(0, num_space):
+		user_response = raw_input("\n Fill in the blank with your best guess" + space[quiz_num] + "?: ")
+		while answer_incorrect(user_response, answers[quiz_num]):
+			user_response = raw_input("\n Please try again:" + space[quiz_num] + ": ")
+		quiz = quiz.replace(space[quiz_num], answers[quiz_num])
+		print quiz
+		# the below if quiz_num == num_space check does not return passing remarks if aligned for quiz_num
+		if quiz_num == num_space - 1:
+			print "\n You passed, but barely.... you know what you got?  F+"
+
+
+# Users may enter upper or lower case responses and will then check whether the user_response is correct.
+def answer_incorrect(user_response, correct_answer):
+	user_response = user_response.lower()
+	correct_answer = correct_answer.lower()
+	return user_response != correct_answer
+
+
+# On Run the module will start with 'select_level()'
+select_level()
