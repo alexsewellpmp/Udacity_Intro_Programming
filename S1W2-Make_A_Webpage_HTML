@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Stage 1 - 10 12 2015</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <!DOCTYPE html>
+
+<!-- - This vs1.0 is an HTML DOCTYPE for Alex Sewell's Stage 1 project submission for Intro to Programming 
+course through Udacity-->
+
+<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="Stage 1 Style 10 16 2015.css">
+		<title>Alex's Stage 1 Page</title>
+</head>
+<body>
+	<div class="background">
+		<div class="section"><h2>Stage 1 Project Contents</h2></div>
+		    <div id="contentstable">
+			    <div id="lcontent">
+		          	<li><a href="#Web Basics">Web Basics</a></li>
+		  	    	<li><a href="#Composition of HTML">Composition of HTML</a></li>
+		  	    	<li><a href="#First Lesson Key Points">First Lesson Key Points</a></li>
+		  	    	<li><a href="#Structured Documents">Structured Documents</a></li>
+		        </div>
+		        <div id="rcontent">
+		  			<li><a href="#Web Page Structure Tree">Web Page Tree Structure</a></li>
+		  		    <li><a href="#How Indented HTML and 'boxes' Relate">HTML Indents and Boxes</a></li>
+		  		    <li><a href="#CSS - Cascading Style Sheets">Cascading Style Sheets</a></li>
+		  		    <li><a href="#Coding Text Editors">Code Text Editors</a></li>
+				</div>  	  
+			</div>
+		<div class="section"><h2>Lesson 1 - HTML Basics</h2></div>
+			<div id="web"><h3>Web Basics</h3></div>
+				<div class="content">
+					<p>
+						Web can host a multitude of media types that include video, images, text and much more.	HTML is the main document type on the web. Some basic that we'll cover in this course include;
+					</p>
+						<ul>
+							<li><b>1. World Wide Web</b> - A global network of servers that hosts vast forms and amounts of shared media.</li>
+							<li><b>2. HTML</b> - Stands for Hypertext Markup Language.</li>
+							<li><b>3. URL</b> - Generic term for the names and addresses referring to the objects on the web.</li>
+							<li><b>4. HTTP</b> - Stands for Hypertext Transfer Protocol, the rules for transferring files over the web.</li>
+							<li><b>5. Web Apps</b> - This is the meat of the course - more to come.</li>
+						</ul>
+					<p>
+						To access the web (remote servers), your personal device (laptop, tablet or smartphone) uses something called an internet browser like Google Chrome, Firefox, Internet Explorer or Safari from Apple to send a <em>HTTP Request </em>to a <em>servers</em> that host the media and/or application files, and our main topic item, HTML documents.
+					</p>
+				</div>
+			<div id="HTML"><h3>Composition of HTML</h3></div>
+				<div class="content">
+					<p>
+						<u><b>Structure of HTML</u></b>;
+							<ul>
+							 	<li>1. Text content, what you see.</li>
+								<li>2. Markup to format content appearance.</li>
+								<li>3. Reference to other documents (e.g. videos and images).</li>
+								<li>4. Links to other pages called 'hyperlinks'.</li>
+							</ul>
+						Again text is text in HTML, markup is formatting.			
+					</p>
+					<p>
+					<u><b>Features of HTML</b></u>;
+						<ul>
+							<li><b>1. Formatting Tag Elements</b> - Are used to format text and use tags structured like this <tagname>content</tagname> to achieve the desired format. Note the - <em>opening tag and /closing tag</em>.  If you don't do this the open tag will dictate format for subsequent text until a closing </tagname> is added. <a href="http://www.w3schools.com/html/html_elements.asp">Click here</a> for more detail.</li>
+							<li><b>2. Attribute Tags</b> - Can be used to embed images or direct hyperlinks to video sources. For example, the 'a href' tag will direct you to a video link, while a 'img src' will display an image.This is also a tag that doesn't use a closing tag. You can use embedded images like the one below can also be used to be a link to another site, making the image a hyperlink. <a href="http://www.w3schools.com/html/html_attributes.asp">Clike here</a> to learn more.</li>
+							<li><b>3. White Space Tags</b> - Specific tags are used to define spaces between paragraphs, sentences and sections. <a href="http://www.w3schools.com/html/html_paragraphs.asp">Click here</a> to see some examples.</li>
+							<li><b>4. Inline / Inblock Elements</b>- In block means to put content into a box on a page. For example; div, p, form are each block elements. These 'blocks' can have dimensions like height and width.</li>
+							<li><b>5. Container ELements</b> - We'll learn more about these later, but these include the 'Span' (inline) and 'Div' (block). <a href="http://www.w3schools.com/html/html_blocks.asp">Click here</a> to learn more.</li>
+						</ul>
+					</p>
+						<p>
+							<ul>
+								<img src="http://www.udacity.com/cs253x/hipmunk.png" alt="little chipmunk">
+								<a href="http://www.udacity.com/cs253x/hipmunk.png">Click here</a> to try out Udacity's HTML playground.
+							</ul>
+						</p>
+				</div>
+			<div id="keypoints"><h3>First Lesson Key Points</h3></div>
+				<div class="content">
+					<p>
+						<ul>
+							<li><b>1. What's a Web Page</b> - A web page is a text document written in a language called HTML. Web browsers read these documents, and then interpret and display them.</li>
+							<li><b>2. How Coding Works</b> - Coding happens when programmers write text in a language that a computer can understand. The computer can then follow the instructions the programmer wrote.</li>
+							<li><b>3. Computers are Stupid</b> - Programmers need to write exactly the way a computer understands (also known as writing with correct "syntax". For example, you don't want to forget closing tags!</li>
+							<li><b>4. Programmers Can't Remember Everything</b> - There are too many details to keep everything in your head. And that's okay.  <span class="italics">If you forget how to make text italic in HTML, you can always just look it up</span>.
+							<li><b>5. Basic HTML Vocabulary</b> - You will be using HTML in the next few lessons, so it will be helpful if you're comfortable with the jargon like 'tags', elements and attributes and how they relate to one another.</li>
+						</ul>
+					</p>
+				</div>
+		<div class="section"><h2>Lesson 2 - Structured Documents</h2></div>	
+			<div id="structureddocs"><h3>Structured Documents</h3></div>
+				<div class="content">	
+					<p>
+						This is looking at the structure of the code behind a webpage and interpreting it to predict what the webpage will look like. It’s less about creating the title, boxes and content and more about learning the structure of any webpage.
+							<ul>
+								<li><b>1. HTML</b> - Is like the constructed house, its rooms, levels etc. This is the language of the web and at the most	basic level, the browser interprets the HTML 'Tags' to display the content.</li>
+								<li><b>2. CSS</b> - Is like the design and aesthetics of your house. This controls the style of the web page (how it looks).</li>
+								<li><b>3. JavaScript</b> - Functional features, remotes, TV's and appliances. <em>We'll talk more about this later.</em></li>
+							</ul>
+						Again these are all languages that serve a different.
+					</p>  
+				</div>
+			<div id="webtree"><h3>Web Page Structure Tree</h3></div>
+				<div class="content">	
+					<p>
+						<ul>
+							The "tree-like structure" is a result of elements within elements within elements which when mapped out create a flow chart or tree look. In a browser, this structure shows up as a series of nested boxes. There are boxes inside of boxes inside of boxes, and so on.
+						</ul>
+					</p>
+				</div>
+			<div id="boxes"><h3>How Indented HTML and 'boxes' Relate</h3></div>
+				<div class="content">
+					<p>
+						<ul>
+							The indentions you see on a webpage are the result of tags that create white space or box within which the value or attribute is housd.
+						</ul>
+					</p>
+				</div>
+		<div class="section"><h2>Lesson 3 - Adding Style With CSS</h2></div>
+			<div id="editors"><h3>Coding Text Editors</h3></div>
+				<div class="content">
+					<p>
+						As mentioned in the previous lessons you need to have familiarized yourself with basic programmer tools such as;
+							<ul>
+								<li><b>1.<a href="http://scratchpad.io/obsolete-duck-2310">Scratchpad</a></b>is a text editor that provides immediate feedback on your coding and renders in real time. The CSS is included within the head using<code>style</code>tags. However its best use is with less complex coding</li>
+								<li><b>2.<a href="http://codepen.io/</li>">CodePen</a></b>, with minor delays from when you enter code to when you see it render on your webpage, this
+			  				 	editor allows for more complex coding and CSS to be worked as a separate file. 
+								</li>
+								<li><b>3.<a href="http://www.sublimetext.com/2">Sublime Text 2</a></b>Permits multiple languages and more complex coding, but doesn't render 
+			          			immediately, so you have to refresh the page to see your changes.</li>
+							</ul>
+						Here's a complexity and capability visual taken from Udacity's course content.
+							<ul>
+								<img src="http://i.imgur.com/mVBw5tV.png" alt="Complexity Graph" align="middle">
+							</ul>	 
+					</p>
+				</div>
+			<div id="CSS"><h3>Common CSS Lingo</h3></div>
+				<div class="content">
+					<p>
+						Similar to HTML, CSS or<u>C</u>ascading<u>S</u>tyle<u>S</u>heetshas, has its own unique lingo to describe functional lines of code.  Examples include;  
+			  				<ul>
+			                  <!--For purposes of efficiency and in the interest of time, the following definitions were copied from Udacity's Intro to Programming Course-->
+			      				<li><b>1. Selectors</b>- In CSS<code>h1</code>is called a selector. The<code>img</code>or even<code>div</code>elements of HTML are called selectors in CSS.  This is because in CSS you'd use these tags to tell CSS <em>"Find these elements and apply this format..."</em>.</li>
+		   						<li><b>2. Bracers</b>-<code>{</code>as the opening brace and a<code>}</code>as a close brace and everything in between would be a "rule".</li> 
+								<li><b>3. CSS Style</b>- creates the "style" you witness on a webpage.  Using either HTML elements in the case of<code></--style>div {color:blue}</--style></code>or an HTML attribute<code>div style="...</code></li>
+								<li><b>4. Rule</b>- a line of CSS code describing the value that a certain attribute should take.</li>
+								<li><b>5. Property</b>- The property you want to change.</li>
+								<li><b>6. Value</b>- The value that you want to assign to the attribute.</li>
+								<li><b>7. Selector</b>- The name that you use to in order to target the elements that are assigned to a class or id attribute in the HTML.</li>
+								<li><b>6. Class</b> - A class refers to a group of elements that can be styled together. Class names should not contain periods or any other punctuation marks such as class="1.1"</li>
+								<li><b>7. ID</b>- ID's are unique identifiers that uniquely identifies an element in HTML.</li>
+			  				</ul>
+		          		These unique CSS functions are also how CSS controls HTML.<a href="https://youtu.be/oaitg9nRqvc">Click Here</a>to understand the way CSS rules are applied. Cascading can be thought of as inherited and hierarchical. Also see<a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#Inheritance">CSS WiKi</a>to learn more.
+	        </p>
+				</div>
+			<div id="CSS"><h3>Applying CSS Code to Your HTML</h3></div>
+					<div class="content">
+				      	<p>
+				          	Know your learning reference and resources; here are a few:
+					            <ul>
+					                <li><b>1.<a href="https://developer.mozilla.org">MDN - Mozilla Developer Network</a></b>is a massive knowledge sharing site with tons of webdev resources.</li>
+		        							<li><b>2.<a href="https://youtu.be/oaitg9nRqvc">YouTube</a></b>is also a valuable tool for video learning.</li>
+		        							<li><b>3.<a href="www.google.com">Google</a></b>what you're looking to do. Ask and you shall receive.</li>
+		        							<li><b>4.<a href="www.W3schools.com">W3 Schools</a></b>offers a vast learning repository that includes multiple programming launguages with exercises and tutorials.</li>
+					            </ul>
+				          	There are three ways to apply CSS to control your HTML style.  Just remember that the more mixed in your code is the more complex and error prone your code will be.
+					            <ul>
+					                <li><b>1. CSS within HTML Head</b>- This puts the CSS directly into the HTML file using <code>style</code> tags to identify the CSS rules.</li>
+					                <li><b>2. CSS File Link</b>- Saving your CSS file separate from your HTML file within the same folder, you would insert into the HTML head the <code>a href</code> tag with the linked file name.  Your browser would then know to apply that CSS file to the HTML code.</li>
+					                <li><b>3. Inline HTML Styling</b>- This is the most error prone and duplicative approach because you manually format each element.</li>
+					            </ul>
+					    </p>
+			        CSS styling with boxes;
+				        <p>
+		                Box formatting involves the following four main properties.  You can learn more about box styling 
+		                <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">here</a>.
+				        		<ul>
+						        	<li><b>1. Margin</b>- Styles areas around the box defined by the div tag and selectors.</li>
+						        	<li><b>2. Border</b>- Defines what type of border to display.</li>
+						        	<li><b>3. Padding</b>- Space between the element border and element content.</li>
+						        	<li><b>4. Content</b>- Is whatever you select to put inside the box or div.</li>
+						        </ul>
+				        </p>
+				    </div>    
+	</div>
+</body>
+</html>
+    
+    
+    
+    
+    
+  </body>
+</html>
