@@ -1,0 +1,70 @@
+/*This vs1.0 is the CSS for Alex Sewell's Stage 1 vs1.0 HTML
+        project submission for Intro to Programming course through Udacity*/
+        
+        
+        body {
+        box-sizing: content-box;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #d3d3d3;
+        border-width: 15px;
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 1.4em;
+        font-family: "Segoe UI Emoji";
+        color: #303030;
+        }
+        .contentstable {
+        display: flex;
+        flex-direction: column;
+        }
+        #lcontent {
+        flex: none;
+        }
+        #rcontent {
+        flex: none;
+        }
+        .section {
+        box-sizing: content-box;
+        padding: 1px;
+        border-radius: 10px;
+        background-color: #4682b4;
+        margin: 10px auto;
+        font-size: 1.4em;
+        text-align: center;
+        color:white;
+        }
+        .content {
+        box-sizing: content-box;
+        padding: 30px;
+        margin: 10px auto;
+        font-size: 1.4em;
+        text-align: left;
+        color: #303030;
+        }
+        h3 {
+        box-sizing: content-box;
+        padding: 2px;
+        border-radius: 10px;
+        background-color: #D6D6C2;
+        margin: 5px auto;
+        font-size: 1.4em;
+        text-align: center;
+        }
+        li {
+        line-height: 36px;
+        list-style-type: none;
+        }
+        .toolcomplexity {
+        }
+        .italics {
+        font-style: oblique;
+        }
+        .code {
+        color: #303030;
+        background-color: #F3F3F3;
+        border: 1px solid #DCDCDC;
+        }
+        /*This serves to only show my
+        knowledge of div vs. span properties*/
