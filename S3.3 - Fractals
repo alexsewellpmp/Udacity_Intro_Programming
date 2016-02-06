@@ -1,0 +1,54 @@
+# Lesson 3.3: Fractals Mini Project
+# Draw 'Sierpinski Triangle' Turtles
+# PEP8 Validated - http://pep8online.com/checkresult
+# Sitation:'Sierpinski' http://www.lpb-riannetrujillo.com/blog/python-fractal/
+
+import turtle
+PROGNAME = 'Tri_Fractals'
+
+# alice's features
+alice = turtle.Turtle()
+alice.color('blue')
+alice.speed(2000)
+alice.shape('turtle')
+alice.shapesize(1, 1, 1)
+
+# Equilateral triangle dimensions
+Tri_Points = [[-125, -125], [0, 125], [125, -125]]
+
+# Defines the mid-point of the fractal center
+def getMid(p1, p2):
+
+    return ((p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2)
+
+# Draws equilateral triangle fractal
+def triangle(Tri_Points, depth):
+
+    window = turtle.Screen()
+    window.bgcolor("black")
+    window.title("Equilateral Fractal Sample")
+
+    # Draws Main Triangle
+    alice.up()
+    alice.goto(Tri_Points[0][0], Tri_Points[0][1])
+    alice.down()
+    alice.goto(Tri_Points[1][0], Tri_Points[1][1])
+    alice.goto(Tri_Points[2][0], Tri_Points[2][1])
+    alice.goto(Tri_Points[0][0], Tri_Points[0][1])
+
+    if depth > 0:
+        triangle([Tri_Points[0],
+                  getMid(Tri_Points[0], Tri_Points[1]),
+                  getMid(Tri_Points[0], Tri_Points[2])],
+                 depth-1)
+        triangle([Tri_Points[1],
+                  getMid(Tri_Points[0], Tri_Points[1]),
+                  getMid(Tri_Points[1], Tri_Points[2])],
+                 depth-1)
+        triangle([Tri_Points[2],
+                  getMid(Tri_Points[2], Tri_Points[1]),
+                  getMid(Tri_Points[0], Tri_Points[2])],
+                 depth-1)
+
+triangle(Tri_Points, 4)
+window.exitonclick()
