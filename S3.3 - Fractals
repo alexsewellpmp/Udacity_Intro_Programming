@@ -13,6 +13,12 @@ alice.speed(2000)
 alice.shape('turtle')
 alice.shapesize(1, 1, 1)
 
+# alice's canvas
+window = turtle.Screen()
+window.bgcolor("black")
+window.title("Equilateral Fractal Sample")
+
+
 # Equilateral triangle dimensions
 Tri_Points = [[-125, -125], [0, 125], [125, -125]]
 
@@ -23,10 +29,6 @@ def getMid(p1, p2):
 
 # Draws equilateral triangle fractal
 def triangle(Tri_Points, depth):
-
-    window = turtle.Screen()
-    window.bgcolor("black")
-    window.title("Equilateral Fractal Sample")
 
     # Draws Main Triangle
     alice.up()
